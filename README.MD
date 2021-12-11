@@ -6,6 +6,7 @@ diesel migration redo
 cargo run
 
 //------ docker file ----
-(Corregir)
-docker build -t ms_in_out .
-docker run -it --rm --name ms_in_out ms_in_out
+
+docker pull rust
+docker build -t my-rust-app .
+docker run -it --rm --name my-running-app my-rust-app

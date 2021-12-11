@@ -1,8 +1,8 @@
-FROM rust:1.24
+FROM rust:1.31
 
-WORKDIR /ms_in_out
-COPY ./ ./
+WORKDIR /usr/src/myapp
+COPY . .
 
-RUN cargo build 
+RUN cargo install --path .
 
-CMD ["cargo run"]
+CMD ["myapp"]
